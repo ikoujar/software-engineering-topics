@@ -1,6 +1,24 @@
 Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
 _____________________________________
 
+## Quotes
+- "spending time keeping your code clean is not just cost effective; it’s a matter of professional survival"
+- "Each function, each class, each module exposes a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details."
+- "remember you are an author, writing for readers who will judge your effort"
+- "The proper use of comments is to compensate for our failure to express ourself in code"
+- "Writing tests leads to better designs"
+
+## Clean Code Aspects
+- Elegant and efficient
+- Does one thing well
+- Can easily be read, and enhanced by a developer other than its original author
+- Meaningful names
+- Minimal dependencies
+- Has unit and acceptance tests
+- Always looks like it was written by someone who cares
+- Nothing obvious that you can do to make it better
+- No duplication
+
 ## General rules
 1. Follow standard conventions.
 2. Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible.
@@ -72,12 +90,33 @@ _____________________________________
 8. Better to have many functions than to pass some code into a function to select a behavior.
 9. Prefer non-static methods to static methods.
 
+## Error Handling
+1. Write try-catch-finally first when wrtiting new code
+2. Create informative error messages
+3. Don’t return null (throws an exception or returns a special case object)
+4. Don’t pass null
+5. Wrap third-party API
+
 ## Tests
-1. One assert per test.
-2. Readable.
-3. Fast.
-4. Independent.
-5. Repeatable.
+1. Test one thing
+2. Readable
+3. Fast
+4. Independent
+5. Repeatable in every environement
+
+## Classes
+1. Small
+2. SRP (Single Responsibility Principle)
+3. Should be open for extension but closed for modification
+4. We should also be able to write a brief description of the class in about 25 words, without using the words “if”, “and”, “or”, or “but”
+5. Small number of instance variables
+6. Should depend upon abstractions, not on concrete details
+
+## Systems
+1. Move all aspects of construction to "main" or equivalent
+2. Use abstraction for dependencies
+3. Use Dependency Injection (DI)
+4. Use the simplest thing that can possibly work.
 
 ## Code smells
 1. Rigidity. The software is difficult to change. A small change causes a cascade of subsequent changes.
